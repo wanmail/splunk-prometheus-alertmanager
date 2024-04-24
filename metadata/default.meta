@@ -1,0 +1,8 @@
+[]
+access = read : [ * ], write : [ sc_admin ]
+
+[alert_actions/alertmanager]
+export = system
+
+[alerts]
+export = system

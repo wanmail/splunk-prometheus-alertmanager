@@ -1,0 +1,32 @@
+<form class="form-horizontal form-complex">
+    <div class="control-group">
+        <label class="control-label" for="alertmanager_integration_url">Integration URL</label>
+
+        <div class="controls">
+            <input type="text" name="action.alertmanager.param.integration_url_override" id="alertmanager_integration_url" placeholder="Optional" />
+            <span class="help-block">Override the Global alertmanager Integration URL</span>
+        </div>
+        <label class="control-label" for="alertmanager_integration_key">-OR- Integration Key</label>
+        <div class="controls">
+            <input type="text" name="action.alertmanager.param.integration_key_override" id="alertmanager_integration_key" placeholder="Optional" />
+            <span class="help-block">Override the Global alertmanager Integration Key</span>
+            <span class="help-block">Integration URL will take precedence if both specified.</span>
+        </div>
+    </div>
+    <br clear="both" />
+    <div class="control-group">
+      <label class="control-label" for="alertmanager_incidents_custom_details">Custom Details</label>
+
+    <div class="controls">
+        <textarea name="action.alertmanager.param.custom_details" id="alertmanager_incidents_custom_details" style="height: 140px;" placeholder='{"Job Label": "$job.label$"}'></textarea>
+        <span class="help-block">
+            Custom Details to be sent.  Must be valid JSON.
+            Custom Alert Tokens can be added.
+            <a href="{{SPLUNKWEB_URL_PREFIX}}/help?location=learnmore.alert.action.tokens" target="_blank"
+               title="Splunk help">Learn More <i class="icon-external"></i></a>
+            * If the token used contains double quotes please add delimiters around the token i.e.
+            <pre>{ .... "__$search$__"}</pre>
+        </span>
+    </div>
+</div>
+</form>
